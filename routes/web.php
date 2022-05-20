@@ -19,3 +19,9 @@ use App\Http\Controllers\PassengerController;
 //});
 
 Route::get('/', [PassengerController::class, 'getPassengerBookings']);
+Route::get('/passengersOnParticularDay', [PassengerController::class, 'getPassengersOnSpecifiedDate']);
+Route::get('/trainInfoAccToAgeRange',[PassengerController::class, 'getTrainInfoAccToAgeRange']);
+Route::get('/passengersCountForTrain',[PassengerController::class, 'getPassengerCountForTrain']);
+Route::get('/trainNamePassengers',[PassengerController::class, 'getPassengersAccToTrainName']);
+Route::get('/deletePassengerView', [PassengerController::class, 'deletePassengerView']);
+Route::delete('/deletePassengerBooking', [PassengerController::class, 'deletePassengerBooking']);
